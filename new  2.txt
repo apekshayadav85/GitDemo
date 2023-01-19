@@ -1,0 +1,76 @@
+package TestProject.Tproject;
+
+import org.testng.annotations.Test;
+
+public class DataProvider {
+	
+	@Test(dataProvider = "data")
+	public void DP1(int num1,int num2,int num3)
+	{
+		//System.out.println("DP1");
+		System.out.println(num1+" "+num2+" "+num3);
+	}
+
+	
+	@org.testng.annotations.DataProvider(name="data")
+	public Object[][] DP2()
+	{
+		Object[][] obj = new Object[3][3];
+		obj[0][0]= 10;
+		obj[0][1]= 20;
+		obj[0][2]= 30;
+		
+		obj[1][0]= 40;
+		obj[1][1]= 50;
+		obj[1][2]= 60;
+		
+		obj[2][0]= 70;
+		obj[2][1]= 80;
+		obj[2][2]= 90;
+		
+		
+		
+		return obj;
+	}
+
+}
+
+=======================================================
+
+
+package TestProject.Tproject;
+
+import org.testng.annotations.Test;
+
+public class DataProvider {
+	
+	@Test(dataProvider = "data")
+	public void DP1(String num1,String num2,String num3)
+	{
+		//System.out.println("DP1");
+		System.out.println(num1+" "+num2+" "+num3);
+	}
+
+	
+	@org.testng.annotations.DataProvider(name="data")
+	public Object[][] DP2()
+	{
+		Object[][] obj = new Object[3][3];
+		obj[0][0]= "abc";
+		obj[0][1]= "hhs";
+		obj[0][2]= "rtr";
+		
+		obj[1][0]= "ttt";
+		obj[1][1]= "uuu";
+		obj[1][2]= "kkk";
+		
+		obj[2][0]= "bbb";
+		obj[2][1]= "eee";
+		obj[2][2]= "ddd";
+		
+		
+		
+		return obj;
+	}
+
+}
